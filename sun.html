@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+        content="IE=edge">
+        <meta name="viewport"
+        content="width=device-width, initial-sacle=1.0">
+        <title>solar system</title>
+        <style>
+            body{
+                margin: 0;
+                height: 120vh;
+                width: 70vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: black;
+            
+                overflow: hidden;
+            }
+            .container{
+                font-size: 10px;
+                width: 60em;
+                height: 40em;
+                position: relative;
+                margin-left: -280px;
+            }
+            .sun{
+                position: absolute;
+                top: 15em;
+                left:15em;
+                width: 10em;
+                height: 10em;
+                background-image: linear-gradient(yellow,orange,red);
+
+                border-radius: 50%;
+                box-shadow: 0 0  3em white ;
+            }
+               
+            
+            .earth , .moon{
+                position: absolute;
+                border-style: solid;
+                border-color: white transparent transparent;
+                border-width: 0.1em 0.01em 0 0;
+                border-radius: 50%;
+            }
+            .earth{
+                top: 5em;
+                left: 5em;
+                width: 30em;
+                height: 30em;
+                animation:  hari 16.4s linear infinite;
+                box-shadow: 0 0  0.2em white;
+            }
+            .moon{
+                top:0;
+                right:0;
+                width: 8em;
+                height: 8em;
+                animation: hari 3s linear infinite;
+                box-shadow: 0 0  0.1em white;
+            }
+            .earth::before,
+            .moon::before{
+                content: '';
+                position: absolute;
+                border-radius: 50%;
+            }
+            .earth::before{
+                top: 2.8em;
+                right: 2.8em;
+                width: 3em;
+                height: 3em;
+                background:linear-gradient(lightgreen,aqua,green);
+            }
+            .moon::before{
+                top: 0.8em;
+                right:0.2em;
+                width:1.2em;
+                height:1.2em;
+                background: linear-gradient(grey,silver);
+            }
+            @keyframes hari {
+                to{
+                    transform: rotate(360deg);
+                }
+            }
+            .star{
+                
+    
+                width: 0.7em;
+                height: 0.7em;
+                
+                animation:  hari 2s linear infinite;
+                background-color: gold;
+            }
+          
+            
+        </style>
+    </head>
+    <body>
+            <h1 style="-webkit-text-fill-color: dodgerblue; margin-top:-420px;margin-left: 400px;">SolarSystem </h1>
+        <div class="container" >
+            <div class="star" style="margin-left: 90px;margin-top: 50px;"></div>
+            <div class="star" style="margin-left: 290px;margin-top: -10px;"></div>
+            <div class="star" style="margin-left: 90px;margin-top: 200px;"></div>
+            <div class="star" style="margin-left: 200px;margin-top: 100px;"></div>
+            <div class="star" style="margin-left: 310px;margin-top: -200px;"></div>
+
+
+                
+
+            <div class="sun"><b style="margin:37px; display: flex;font-size: 15px; -webkit-text-fill-color: rgb(0, 0, 0);">Sun</b>
+            </div>
+            <div class="earth"><div style="position: absolute;padding-left: 245px;padding-top: 37px;font-size: 10px; -webkit-text-fill-color: black;"><b>Earth</b></div>
+                <div class="moon"><div style="position: relative;padding-left:67px;padding-top: 11px;font-size: 4px; -webkit-text-fill-color: rgb(229, 17, 17);"><b>Moon</b></div>
+            </div>
+        </div>
+    </body>
+</html>
